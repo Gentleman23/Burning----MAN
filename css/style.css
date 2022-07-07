@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap');
+body {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* --------- СЕКЦИЯ HEADER --------- */
+
+.header {
+    background: url(../img/header.jpg) no-repeat center top / cover;
+    padding-top: 57px;
+    padding-bottom: 322px;
+    color: #fff;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    padding: 0;
+    margin-left: 68px;
+}
+
+.menu li {
+    list-style-type: none;
+    margin-right: 41px;
+}
+
+.menu li a {
+    font-size: 14px;
+    transition: all 0.7s ease;
+}
+
+.menu li a:hover {
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+}
+
+.tel {
+    margin-left: auto;
+    font-size: 17px;
+}
+
+.menu-hamb {
+    background: none;
+    border: none;
+    margin-left: 30px;
+    display: none;
+    cursor: pointer;
+    
+}
+
+.menu-hamb img {
+    width: 31px;
+    height: 48px;
+}
+
+.offer {
+    margin-top: 216px;
+    color: #fff;
+    width: 511px;
+}
+
+.header__title {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.header__title span {
+    font-size: 100px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 18px 23px;
+    font-size: 17px;
+    width: 237px;
+    border: 2px solid #fff;
+    transition: all 0.7s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* --------- СЕКЦИЯ ABOUT --------- */
+
+.about {
+    padding-top: 114px;
+}
+
+.about__text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    line-height: 1.62em;
+    margin: 0;
+}
+
+.about__left, .about__right {
+    width: 570px;    
+}
+
+.about h3 {
+    font-size: 25px;
+    margin-bottom: 42px;
+}
+
+.about__title {
+    font-size: 50px;
+    margin-bottom: 67px;
+}
+
+.gallery {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery img {
+    transition: all 0.7s ease;    
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);       
+}
+
+
+/* --------- СЕКЦИЯ FOOTER --------- */
+
+.footer__text {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 114px 0;
+}
+
+footer p {
+    margin-right: 57px;
+}
+
+.header .show-menu {
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+    width: 70%;
+    padding: 40px 20px 20px 40px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.header .show-menu li {
+    margin-right: 40px;
+}
+
+
+/* --------- RESPONSIVE --------- */
+/* 1200px - 1400px */
+@media screen and (max-width:1400px) {
+    .container {
+        width: 1140px;
+    }    
+}
+
+/* 992px - 1200px */
+@media screen and (max-width:1200px) {
+    .container {
+        width: 960px;    
+    }
+    .about__left, .about__right {
+        width: 48%;    
+    }
+    .gallery img:nth-child(1) {
+        width: 23%;
+    }
+    .gallery img:nth-child(2) {
+        width: 23%;    
+    } 
+    .gallery img:nth-child(3) {
+        width: 47%;    
+    }     
+}
+
+/* 768px - 992px  */
+@media screen and (max-width:992px) {
+    .container {
+        width: 720px;    
+    }    
+}
+
+/* 576px - 768px */
+@media screen and (max-width:767px) {
+    .container {
+        width: 540px;    
+    }
+    .menu {
+        display: none;
+    }
+
+    .menu-hamb {
+        display: block;
+    }
+
+    .header__title span {
+        line-height: 1em;
+    }
+
+    .offer {
+        width: 100%;
+    }
+
+    .about__text {
+        flex-wrap: wrap;
+    }
+
+    .about__left, .about__right {
+        width: 100%;
+    }
+
+    .about__left{
+        margin-bottom: 40px;
+    }
+
+    .gallery {
+        flex-wrap: wrap;
+    }
+
+    .gallery img:nth-child(1), 
+    .gallery img:nth-child(2), 
+    .gallery img:nth-child(3) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer__text {
+        flex-wrap: wrap;
+        
+    }
+
+    .footer__text p {
+        margin-bottom: 20px;
+        
+    }    
+}
+
+/* 320px - 576px */
+@media screen and (max-width:576px) {
+    .container {
+        width: 90%;    
+    }
+    
+}
